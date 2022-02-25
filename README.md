@@ -1,2 +1,2 @@
 JoAnna Olstad
-Description: I am not sure what I am doing for the game yet
+Description: The game I am going to make is Tic Tac Toe. 
