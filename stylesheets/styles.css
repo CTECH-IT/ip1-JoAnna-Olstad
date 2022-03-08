@@ -4,7 +4,8 @@
     font-family: 'Itim', cursive;
 }
 
-.background {
+/* Makes the background a gradient */
+.background {    
     background: linear-gradient(to bottom, #00ccff 0%, #ff0000 109%);
     height: 100vh;
     padding-top: 1px;
@@ -49,10 +50,12 @@
     cursor: pointer;
 }
 
+/* Makes player x red */
 .playerX {
     color: #ff0000;
 }
 
+/* Makes player O blue */
 .playerO {
     color: #0000ff;
 }
