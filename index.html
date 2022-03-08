@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>My Awesome Website</title>
+  <title>Tic Tac Toe</title>
   <meta name="author" content="JoAnna Olstad">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -11,11 +11,29 @@
 </head>
 
 <body>
-  <header>
-    <h1 class="page-title">Tic Tac Toe</h1>
-    <p>ǝoꓕ ɔɐꓕ ɔᴉꓕ</p>
-  </header>
-
+    <main class="background">
+      <section class="title">
+        <h1>Tic Tac Toe</h1>
+      </section>
+      <section class="display">
+        Player <span class="display-player playerX">X</span>'s turn
+      </section>
+      <section class="container">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+      </section>
+      <section class="display announcer hide"></section>
+      <section class="controls">
+        <button id="reset">Reset</button>
+      </section>
+    </main>
   <script src="scripts/main.js"></script>
 </body>
 
