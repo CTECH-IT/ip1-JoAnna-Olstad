@@ -10,16 +10,16 @@
     height: 100vh;
     padding-top: 1px;
 }
-
+/*Makes the title black*/
 .title {
-    color: white;
+    color: #000000;
     text-align: center;
     font-size: 40px;
     margin-top: 10%;
 }
 
-.display {
-    color: white;
+.display { /*Makes text other than the title black*/
+    color: #000000;
     font-size: 25px;
     text-align: center;
     margin-top: 1em;
@@ -30,7 +30,7 @@
     display: none;
 }
 
-.container {
+.container { /*centers the board*/
     margin: 0 auto;
     display: grid;
     grid-template-columns: 33% 33% 33%;
@@ -39,8 +39,8 @@
 
 }
 
-.tile {
-    border: 1px solid #ffff00;
+.tile { /*sets the size and olor of the board and aligns them*/
+    border: 1px solid #000000;
     min-width: 100px;
     min-height: 100px;
     display: flex;
@@ -82,6 +82,7 @@
     background-color: #498AFB;
 }
 
+ /*makes reset button black*/
 #reset {
-    background-color: #339933;
+    background-color: #000000;
 }

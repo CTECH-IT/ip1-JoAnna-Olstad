@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
         [6] [7] [8]
     */
 
-    const winningConditions = [
+    const winningConditions = [         /*Combinations that you can win with*/
         [0, 1, 2],
         [3, 4, 5],
         [6, 7, 8],
@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
         [0, 4, 8],
         [2, 4, 6]
     ];
-
+    /*Tracks if someone has won the game*/
     function handleResultValidation() {
         let roundWon = false;
         for (let i = 0; i <= 7; i++) {
@@ -47,18 +47,20 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-    if (roundWon) {
+        if (roundWon) {
             announce(currentPlayer === 'X' ? PLAYERX_WON : PLAYERO_WON);
             isGameActive = false;
             return;
         }
 
-    if (!board.includes(''))
-        announce(TIE);
+        if (!board.includes(''))
+            announce(TIE);
+
+    /*Pop up that tells which player wins of if it is a tie*/
     }
 
     const announce = (type) => {
-        switch(type){
+        switch (type) {
             case PLAYERO_WON:
                 announcer.innerHTML = 'Player <span class="playerO">O</span> Won';
                 break;
@@ -72,17 +74,17 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     const isValidAction = (tile) => {
-        if (tile.innerText === 'X' || tile.innerText === 'O'){
+        if (tile.innerText === 'X' || tile.innerText === 'O') {
             return false;
         }
 
         return true;
     };
 
-    const updateBoard =  (index) => {
+    const updateBoard = (index) => {
         board[index] = currentPlayer;
     }
-
+/*Tells you which players turn it is*/
     const changePlayer = () => {
         playerDisplay.classList.remove(`player${currentPlayer}`);
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
@@ -91,7 +93,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     const userAction = (tile, index) => {
-        if(isValidAction(tile) && isGameActive) {
+        if (isValidAction(tile) && isGameActive) {
             tile.innerText = currentPlayer;
             tile.classList.add(`player${currentPlayer}`);
             updateBoard(index);
@@ -99,7 +101,7 @@ window.addEventListener('DOMContentLoaded', () => {
             changePlayer();
         }
     }
-    
+/*Takes pieces off the board to start a new game*/
     const resetBoard = () => {
         board = ['', '', '', '', '', '', '', '', ''];
         isGameActive = true;
@@ -116,9 +118,9 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    tiles.forEach( (tile, index) => {
+    tiles.forEach((tile, index) => {
         tile.addEventListener('click', () => userAction(tile, index));
     });
-
+/*Resets the board for a new game when the reset button is clicked*/
     resetButton.addEventListener('click', resetBoard);
 });
