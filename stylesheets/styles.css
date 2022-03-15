@@ -7,7 +7,7 @@
 /* Makes the background a gradient */
 .background {    
     background: linear-gradient(to bottom, #00ccff 0%, #ff0000 109%);
-    height: 100vh;
+    height: 150vh;
     padding-top: 1px;
 }
 /*Makes the title black*/
